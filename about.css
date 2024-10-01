@@ -1,0 +1,126 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter Tight", sans-serif;
+}
+
+.team-section{
+  width: 100%;
+  background-image: url(cg.jpg);
+  background-size: cover;
+}
+.team-section .container{
+  width: 80%;
+  margin: auto;
+}
+.team-section .container .row{
+  width: 60%;
+  margin: auto;
+}
+.team-section .container .row .title{
+  text-align: center;
+  margin-top: 50px;
+}
+.team-section .container .row .title h1{
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #0077ff;
+}
+.team-section .container .row .title p{
+  font-size: 18px;
+  font-family: sans-serif;
+  margin: 30px 0px;
+  color: #fff;
+}
+.content h3 ,h4 , p{
+  color: #fff;
+}
+.team-section .container .team-card{
+  width: 100%;
+  grid-template-columns: repeat(3 , 1fr);
+  grid-row: 40px;
+  margin-top: 50px;
+}
+.team-section .container .team-card .card{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  cursor: pointer;
+}
+.team-section .container .team-card .card .image-section img{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+nav ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #0077ff;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+nav ul li:hover::after{
+  width: 100%;
+}
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .team-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .icons input {
+        width: 100%; /* Full width search input */
+    }
+}
+
+ 

@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+.box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+nav ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #0077ff;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+nav ul li:hover::after {
+  width: 100%;
+}
+
+body,
+html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: i;
+  height: 30px;
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 30px;
+  font-style: normal;
+}
+.t-shirt {
+  z-index: -100;
+  position: absolute; /*zhapysyp kalady*/
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4) url(t-shirt.jpg);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0%;
+}
+.t-shirt :hover {
+  background-image: url(ul.jpg);
+}
+#logo {
+  margin-top: 20px;
+}
+.sidebar {
+  width: 130px;
+  height: 91vh; /* осы */
+  background-color: #07f;
+  justify-content: space-around;
+  justify-items: center;
+  margin-left: 100px;
+  position: relative; /* осы */
+
+  /* height: 100%; */
+}
+.sidebar img {
+  width: 100px;
+  height: 100px;
+  margin-left: 15px;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  transform: rotate(270deg);
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+}
+.little .text {
+  margin-left: 100%;
+}
+.overlay-text {
+  width: 250px;
+  font-size: xx-large;
+  position: absolute;
+  top: 70%; /* Adjust as needed */
+  left: 1000px;
+  transform: translateX(-50%);
+  color: #fff; /* Change color as needed */
+  font-size: 3rem; /* Adjust size */
+}
+.overlay-text em {
+  color: #0077ff;
+  font-size: 3rem;
+  margin-left: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 40%;
+  }
+  .overlay-text p {
+    margin-left: 600px;
+    z-index: -100;
+  }
+
+  .image {
+    height: 200px; /* Adjust as necessary */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  .icons input {
+    width: 100%;
+  }
+
+  .sidebar {
+    padding: 10px;
+  }
+}

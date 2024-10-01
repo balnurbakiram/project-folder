@@ -1,0 +1,169 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+.text {
+  width: 500px;
+  height: 325px;
+  background-color: white;
+  color: #0077ff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+}
+.text h1 {
+  font-size: xx-large;
+}
+.text p {
+  margin-top: 130px;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+nav ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #0077ff;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+nav ul li:hover::after {
+  width: 100%;
+}
+.container {
+  background-color: #07f;
+  color: aliceblue;
+  width: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  height: 50vh;
+}
+.store {
+  display: flex; /* suret birge turady*/
+  background-color: #fff;
+  margin-top: -280px;
+}
+.clothes {
+  border-radius: 8px;
+  width: 350px;
+  margin-top: -50px;
+}
+.clothes img {
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  height: auto;
+  margin: 10px;
+}
+.store .clothes {
+  margin: 20px;
+}
+#videosource {
+  width: 700px;
+  height: 570px;
+  background-color: white;
+  color: #0077ff;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  margin-top: -23%;
+  margin-left: 50%;
+}
+a {
+  text-decoration: none;
+  color: #0077ff;
+  font-weight: bold;
+}
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .text, .container, #videosource {
+    width: 90%; /* Full width with some padding */
+    margin: 10px auto; /* Center with margin */
+  }
+  .text h1 {
+    font-size: 24px; /* Smaller heading */
+  }
+
+  .text p {
+    margin-top: 60px; /* Adjust paragraph margin */
+  }
+
+  .store {
+    flex-direction: column;/* Stack items vertically */
+    margin-top: 50px;
+  }
+
+  .clothes {
+    width: 100%; /* Full width for clothes */
+    margin-top: 50px; /* Adjust spacing */
+  }
+
+  .clothes img {
+    width: 100%; /* Responsive image */
+  }
+
+  #videosource {
+    width: 100%; /* Full width for video */
+    height: auto; /* Auto height */
+    margin-top: 50px; /* Adjust top margin */
+  }
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .text, .container {
+    width: 80%; /* Slightly reduced width */
+  }
+
+  .store {
+    flex-direction: row; /* Default row layout */
+  }
+
+  .clothes {
+    width: 45%; /* Two items per row */
+  }
+
+  #videosource {
+    width: 90%;
+    padding: 50px; /* Adjust video width */
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+  .text, .container {
+    width: 500px; /* Default width */
+  }
+
+  .store {
+    display: flex; /* Retain flex for larger screens */
+  }
+
+  .clothes {
+    width: 350px; /* Default width for clothes */
+  }
+}
